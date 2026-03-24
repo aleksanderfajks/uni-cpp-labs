@@ -1,6 +1,6 @@
 # University C/C++ Labs
 
-Labs exercises from my C/C++ course at Wrocław University of Science and Technology.
+Lab exercises from my C/C++ course at Wrocław University of Science and Technology.
 
 ## Topics Covered
 - Pointers and memory management
