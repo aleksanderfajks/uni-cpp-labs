@@ -1,0 +1,64 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "list.h"
+
+static Node_t * createNode(int head) {
+	Node_t * node = (Node_t *) malloc(sizeof(node));
+	node->head = head;
+	node->tail = NULL;
+	return node;
+}
+
+void push(Node_t * root, int value) {
+	Node_t * currentNode = root;
+	if (currentNode != NULL) {
+		while (currentNode->tail != NULL)
+			currentNode = currentNode->tail;
+		currentNode->tail = createNode(value);
+	}
+}
+
+void printList(Node_t * root) {
+	Node_t * currentNode = root;
+	while (currentNode != NULL) {
+		printf("%d\n", currentNode->head);
+		currentNode = currentNode->tail;
+	}
+}
+
+Node_t * createList(unsigned int nodeCount, ...){
+	Node_t * root = NULL;
+	va_list args;
+	va_start(args, nodeCount);
+	for (unsigned int i = 0; i < nodeCount; i++) {
+		int value = va_arg(args, int);
+		if (i == 0) {
+			root = createNode(value);
+		} else {
+			push(root, value);
+		}
+	}
+	va_end(args);
+	return root;
+}
+
+void removeIf(Node_t ** root, Predicate predicate, int toCompare) {
+	Node_t * currentNode = *root;
+	Node_t * previousNode = NULL;
+
+	while (currentNode != NULL) {
+		if (predicate(currentNode->head, toCompare)) {
+			if (previousNode == NULL) {
+				*root = currentNode->tail;
+			} else {
+				previousNode->tail = currentNode->tail;
+			}
+			free(currentNode);
+			return;
+		}
+		previousNode = currentNode;
+		currentNode = currentNode->tail;
+	}
+}

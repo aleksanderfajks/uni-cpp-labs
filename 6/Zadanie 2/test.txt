@@ -1,0 +1,15 @@
+Korzystając z języka C (kompilator gcc) napisz program, który będzie pobierał z klawiatury znaki ASCII, do wystąpienia litery ’q’ (lub
+’Q’), a następnie zapisze je w postaci jednego łańcucha znakowego w pliku tekstowym input.txt. Znaki wprowadzane są niezależnie od siebie, jeden
+po drugim. Maksymalnie użytkownik może wprowadzić 20 znaków. Jeżeli
+wcześniej nie wystąpi litera ’q’, program ma zapisać dotychczasowe znaki
+do pliku i przerwać swoje działanie.
+
+Korzystając z języka C lub C++ napisz program, który pobierze z klawiatury nazwę (lub ścieżkę) pliku tekstowego oraz pojedynczą
+literę, a następnie wyznaczy ile razy dana litera występuje w zawartości tego pliku. Dla ułatwienia można ograniczyć długość nazw (ścieżek) plików
+do 40 znaków.
+
+Korzystając z języka C++ (kompilator g++) i klas std::ofstream
+oraz std::ifstream napisz program, który odczyta pierwsze 20 znaków ze wszystkich wskazanych plików tekstowych, a następnie połączy odczytane znaki
+w jeden łańcuch i zapisze go w pliku compilation.txt. Nazwy (lub ścieżki)
+plików mają zostać przekazane do programu za pomocą argumentów funkcji
+main().

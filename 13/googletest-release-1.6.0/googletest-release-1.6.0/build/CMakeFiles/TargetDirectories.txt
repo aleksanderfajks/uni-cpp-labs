@@ -1,0 +1,4 @@
+C:/Users/olek-/Desktop/pracaC++/13/googletest-release-1.6.0/googletest-release-1.6.0/build/CMakeFiles/gtest.dir
+C:/Users/olek-/Desktop/pracaC++/13/googletest-release-1.6.0/googletest-release-1.6.0/build/CMakeFiles/gtest_main.dir
+C:/Users/olek-/Desktop/pracaC++/13/googletest-release-1.6.0/googletest-release-1.6.0/build/CMakeFiles/edit_cache.dir
+C:/Users/olek-/Desktop/pracaC++/13/googletest-release-1.6.0/googletest-release-1.6.0/build/CMakeFiles/rebuild_cache.dir
